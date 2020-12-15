@@ -1,0 +1,14 @@
+.intro {
+  &__message {
+    transform: translateY(20%);
+    opacity: 0;
+    transition: opacity .5s ease, transform .5s ease;
+  }
+}
+
+.screen--intro.active .intro{
+  &__message {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
