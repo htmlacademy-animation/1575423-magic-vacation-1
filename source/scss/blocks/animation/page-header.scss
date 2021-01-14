@@ -4,6 +4,7 @@
     &::after {
       width: 0;
       display: block;
+      left: auto;
       right: 0;
       transition: width .3s ease;
     }
