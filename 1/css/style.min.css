@@ -3300,6 +3300,7 @@ img {
   .page-header__menu a::after {
     width: 0;
     display: block;
+    left: auto;
     right: 0;
     transition: width .3s ease; }
   .page-header__menu a.active::after {
