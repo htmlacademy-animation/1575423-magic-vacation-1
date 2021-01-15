@@ -1,0 +1,31 @@
+.social-block__toggler {
+  transition: color .3s ease;
+  &::before {
+    transition: all .3s ease;
+  }
+}
+.social-block__list {
+  transition: opacity .2s ease;
+}
+.social-block--active {
+  .social-block__link {
+    opacity: 1;
+    transform: translateY(0);
+    &--fb {
+      transition: transform .3s ease .1s, opacity .3s ease .1s, color .3s ease;
+    }
+    &--insta {
+      transition: transform .3s ease .3s, opacity .3s ease .3s, color .3s ease;
+    }
+    &--vk {
+      transition: transform .3s ease .5s, opacity .3s ease .5s, color .3s ease;
+    }
+    
+  }
+}
+
+.social-block__link {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: transform .3s ease, opacity .3s ease, color .3s ease;
+}
