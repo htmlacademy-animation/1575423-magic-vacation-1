@@ -1,4 +1,12 @@
+.page-header__logo {
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: all .4s cubic-bezier(.48,.85,.48,.85) .6s;
+}
+
 .page-header__menu {
+  opacity: 0;
+  transition: all .5s cubic-bezier(.48,.85,.48,.85) .8s;
   a {
     transition: color .3s ease;
     &::after {
@@ -34,5 +42,15 @@
         }
       }
     }
+  }
+}
+
+body.load {
+  .page-header__logo {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .page-header__menu {
+    opacity: 1;
   }
 }

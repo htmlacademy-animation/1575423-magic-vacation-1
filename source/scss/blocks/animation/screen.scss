@@ -1,3 +1,10 @@
 .screen__footer {
-    transform: translateY(100%);
+  transform: translateY(100%);
+  transition: all .6s cubic-bezier(.48,.85,.48,.85) .3s;
+}
+
+body.load {
+  .screen__footer {
+    transform: translateY(0);
+  }
 }
