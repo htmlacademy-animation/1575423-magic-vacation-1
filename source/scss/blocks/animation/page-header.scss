@@ -14,14 +14,7 @@
       display: block;
       left: auto;
       right: 0;
-      transition: width .3s ease;
-    }
-    &.active {
-      &::after {
-        display: auto;
-        width: 100%;
-        left: 0;
-      }
+      transition: width .4s ease;
     }
     &:hover,
     &:focus {
@@ -52,5 +45,11 @@ body.load {
   }
   .page-header__menu {
     opacity: 1;
+    a.active::after {
+      display: auto;
+      width: 100%;
+      left: 0;
+      transition: width .4s ease .8s;
+    }
   }
 }
