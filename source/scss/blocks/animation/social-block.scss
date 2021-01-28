@@ -1,7 +1,7 @@
 .social-block__toggler {
   transition: color .3s ease;
   &::before {
-    transition: all .3s ease;
+    transform: scale(0) translate(-50%, -50%);
   }
 }
 .social-block__list {
@@ -28,4 +28,14 @@
   opacity: 0;
   transform: translateY(2rem);
   transition: transform .3s ease, opacity .3s ease, color .3s ease;
+}
+
+body.load {
+  .social-block__toggler {
+    &::before {
+      transform: scale(1) translate(-50%, -50%);
+      transform-origin: top left;
+      transition: transform .4s cubic-bezier(.5, 1.25, .5, 1.25) 1s, width .3s ease, height .3s ease;
+    }
+  }
 }

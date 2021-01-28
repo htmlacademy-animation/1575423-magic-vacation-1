@@ -1,4 +1,12 @@
+.page-header__logo {
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: all .3s cubic-bezier(.5,.85,.5,.85) .6s;
+}
+
 .page-header__menu {
+  opacity: 0;
+  transition: all .4s cubic-bezier(.5,.85,.5,.85) .8s;
   a {
     transition: color .3s ease;
     &::after {
@@ -6,14 +14,7 @@
       display: block;
       left: auto;
       right: 0;
-      transition: width .3s ease;
-    }
-    &.active {
-      &::after {
-        display: auto;
-        width: 100%;
-        left: 0;
-      }
+      transition: width .4s ease;
     }
     &:hover,
     &:focus {
@@ -33,6 +34,22 @@
           background-color: $c-dark;
         }
       }
+    }
+  }
+}
+
+body.load {
+  .page-header__logo {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .page-header__menu {
+    opacity: 1;
+    a.active::after {
+      display: auto;
+      width: 100%;
+      left: 0;
+      transition: width .4s ease .8s;
     }
   }
 }
