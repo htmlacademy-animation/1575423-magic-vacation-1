@@ -1,15 +1,32 @@
+.screen--hidden {
+  display: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .screen-background {
-  // background-color: $c-dark;
-  background-color: red;
+  background-color: $c-dark;
   min-height: 100vh;
   width: 100%;
   position: absolute;
   top: 100vh;
   z-index: 1;
+  opacity: 0;
   transition: top .5s ease;
 }
 
 .screen--prizes.active ~ .screen-background {
   top: 0;
+  opacity: 1;
+  height: 0;
+}
+
+.screen--prizes.active {
+  z-index: 2;
 }
 
